@@ -1,0 +1,11 @@
+19:16:48 INFO  run runs/extreme-full-3.8M-d192h8 | device=cuda | params=888036 | d192/h8 budget 32 preset extreme-full
+19:18:18 INFO  step    100 | loss 2.9831 | cell 0.115 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:19:47 INFO  step    200 | loss 2.9162 | cell 0.121 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:21:17 INFO  step    300 | loss 2.8028 | cell 0.246 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:22:47 INFO  step    400 | loss 2.6623 | cell 0.299 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:24:17 INFO  step    500 | loss 2.4309 | cell 0.379 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:24:19 INFO  eval  step    500 | solved 0.0000 | finished 0.00 | passes 32.00
+19:25:49 INFO  step    600 | loss 2.1625 | cell 0.440 | grid 0.000 | stop 32.0 | 1.1 it/s
+19:27:19 INFO  step    700 | loss 2.0390 | cell 0.487 | grid 0.012 | stop 32.0 | 1.1 it/s
+19:28:49 INFO  step    800 | loss 2.0237 | cell 0.493 | grid 0.012 | stop 32.0 | 1.1 it/s
+19:30:19 INFO  step    900 | loss 1.9571 | cell 0.504 | grid 0.020 | stop 31.9 | 1.1 it/s

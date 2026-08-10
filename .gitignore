@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
-logs/
-*.pt
+logs/**/*.pt
+data/raw/
+data/extreme-full-train.npz
+data/sudoku-extreme-test.csv

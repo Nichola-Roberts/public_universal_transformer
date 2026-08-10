@@ -107,6 +107,14 @@ PRESETS: dict[str, dict] = {
         materialize=0, augment=True, transpose=True, revision_prob=0.5,
         lr=1e-3, lr_schedule="cycles",
     ),
+    "extreme-full": dict(  # full 3.83M-puzzle Sudoku-Extreme train split, no
+                           # materialisation needed — the pool is already diverse
+        pool="data/extreme-full-train.npz",
+        eval="data/sudoku-extreme-test.csv",
+        d_model=192, n_heads=8, d_ff=768, budget=32,
+        materialize=0, augment=False, transpose=False, revision_prob=0.0,
+        lr=1e-3, lr_schedule="cycles",
+    ),
 }
 
 
