@@ -1,0 +1,41 @@
+{
+  "preset": "extreme-full",
+  "model": {
+    "d_model": 192,
+    "n_heads": 8,
+    "d_ff": 768,
+    "dropout": 0.05,
+    "refine_steps": 128,
+    "settle_threshold": 0.995,
+    "halt_bias_init": -3.0,
+    "rel_bias": true,
+    "structured_pos": true,
+    "kind_embed": true,
+    "settle_feedback": true
+  },
+  "loss": {
+    "settle_weight": 1.0,
+    "pass_weight": 0.1,
+    "min_settle_weight": 0.158,
+    "grade_clues": true,
+    "clue_share": 0.5,
+    "clue_denom_blanks": true
+  },
+  "data": {
+    "augment": false,
+    "transpose": false,
+    "revision_prob": 0.0,
+    "materialize": 0
+  },
+  "train": {
+    "budget": 128,
+    "lr": 0.001,
+    "batch_size": 128,
+    "steps": 80000,
+    "weight_decay": 0.01,
+    "grad_clip": 10.0,
+    "pool": "data/extreme-full-train.npz",
+    "seed": 0,
+    "lr_schedule": "cycles"
+  }
+}
