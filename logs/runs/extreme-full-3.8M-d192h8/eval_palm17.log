@@ -1,0 +1,10 @@
+logs/runs/extreme-full-3.8M-d192h8/latest.pt  step 5999  |  2048 puzzles from data/eval-17clue-64.npz
+
+   budget   solved  cell_acc  finished   passes
+       32   0.5884    0.9006      0.54    28.54
+       64   0.8311    0.9405      0.83    36.78
+       96   0.8394    0.9191      0.85    41.87
+
+  by givens
+        band      n  b32 solved   b32 acc  b32 passes  b64 solved   b64 acc  b64 passes  b96 solved   b96 acc  b96 passes
+       17-21   2048       0.588     0.901       28.54       0.831     0.941       36.78       0.839     0.919       41.87
