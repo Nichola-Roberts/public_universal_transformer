@@ -4,3 +4,4 @@ logs/**/*.pt
 data/raw/
 data/extreme-full-train.npz
 data/sudoku-extreme-test.csv
+.claude-sessions/

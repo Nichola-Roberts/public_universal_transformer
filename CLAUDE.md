@@ -7,8 +7,8 @@ Work accordingly.
 ## Everything worth keeping goes in the repo
 
 - **Conversations**: `~/.claude/projects` is a symlink to `.claude-sessions/` in this
-  repo, so session transcripts are written straight into the working tree.
-  Don't delete, move, or gitignore it.
+  repo. It's gitignored by request, so session transcripts are NOT backed up —
+  they're lost when the pod is terminated, same as anything else outside the repo.
 - **Logs**: write run/training/eval logs to `logs/`. Don't leave anything you
   care about in `/tmp` or elsewhere under `/root`.
 - **This file**: keep CLAUDE.md in the repo and update it when you learn
