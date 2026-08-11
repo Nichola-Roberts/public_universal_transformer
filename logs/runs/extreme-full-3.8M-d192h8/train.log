@@ -616,3 +616,6 @@
 13:20:20 INFO  step  48900 | loss 1.0242 | cell 0.849 | grid 0.691 | stop 22.1 | 0.9 it/s
 13:21:50 INFO  step  49000 | loss 1.0208 | cell 0.854 | grid 0.697 | stop 22.0 | 0.9 it/s
 13:21:52 INFO  eval  step  49000 | solved 0.6978 | finished 0.69 | passes 21.16
+13:25:02 INFO  step  49100 | loss 0.9990 | cell 0.859 | grid 0.699 | stop 21.4 | 0.9 it/s
+13:28:13 INFO  step  49200 | loss 1.0190 | cell 0.859 | grid 0.701 | stop 22.0 | 0.9 it/s
+13:31:24 INFO  step  49300 | loss 1.0544 | cell 0.838 | grid 0.668 | stop 22.4 | 0.9 it/s
