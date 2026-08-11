@@ -84,3 +84,8 @@
 19:40:50 INFO  step   7000 | loss 1.5454 | cell 0.693 | grid 0.303 | stop 30.1 | 0.8 it/s
 19:40:53 INFO  eval  step   7000 | solved 0.3555 | finished 0.32 | passes 29.02
 19:43:34 INFO  step   7100 | loss 1.5661 | cell 0.680 | grid 0.266 | stop 30.8 | 0.8 it/s
+19:46:15 INFO  step   7200 | loss 1.5706 | cell 0.685 | grid 0.268 | stop 30.4 | 0.8 it/s
+19:48:55 INFO  step   7300 | loss 1.5346 | cell 0.701 | grid 0.297 | stop 30.4 | 0.8 it/s
+19:51:36 INFO  step   7400 | loss 1.5701 | cell 0.684 | grid 0.264 | stop 30.7 | 0.8 it/s
+19:54:16 INFO  step   7500 | loss 1.5420 | cell 0.697 | grid 0.297 | stop 30.2 | 0.8 it/s
+19:54:20 INFO  eval  step   7500 | solved 0.3638 | finished 0.31 | passes 29.21
