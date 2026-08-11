@@ -36,6 +36,8 @@
     "grad_clip": 10.0,
     "pool": "data/extreme-full-train.npz",
     "seed": 0,
-    "lr_schedule": "cycles"
+    "lr_schedule": "cycles",
+    "loss_scale_budget": 32.0,
+    "budget_scale": 0.5
   }
 }

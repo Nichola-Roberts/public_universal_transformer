@@ -1,3 +1,2 @@
-04:58:34 INFO  run runs/extreme-full-3.8M-d192h8-b64 | device=cuda | params=888036 | d192/h8 budget 64 preset extreme-full
-05:00:09 INFO  step    100 | loss 3.0233 | cell 0.114 | grid 0.000 | stop 64.0 | 1.0 it/s
-05:01:42 INFO  step    200 | loss 2.9182 | cell 0.116 | grid 0.000 | stop 64.0 | 1.1 it/s
+05:10:29 INFO  run runs/extreme-full-3.8M-d192h8-b64 | device=cuda | params=888036 | d192/h8 budget 64 preset extreme-full budget_scale 0.500
+05:12:17 INFO  step    100 | loss 1.5410 | cell 0.114 | grid 0.000 | stop 64.0 | 0.9 it/s
