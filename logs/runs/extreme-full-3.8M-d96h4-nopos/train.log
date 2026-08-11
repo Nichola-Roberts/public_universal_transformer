@@ -1,0 +1,2 @@
+17:31:32 INFO  run runs/extreme-full-3.8M-d96h4-nopos | device=cuda | params=219384 | d96/h4 budget 32 preset extreme-full budget_scale 1.000
+17:32:47 INFO  step    100 | loss 3.6613 | cell 0.112 | grid 0.000 | stop 32.0 | 1.3 it/s

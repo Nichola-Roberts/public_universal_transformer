@@ -1,0 +1,1 @@
+{"kind": "train", "step": 100, "loss": 3.661313772201538, "lr": 0.0005, "grad_norm": 1.9743263721466064, "cell": 0.11190476268529892, "grid": 0.0, "l_err": 2.95173, "l_settle": 0.40043, "l_pass": 0.76431, "l_min": 1.4729, "mean_stop": 32.0, "finished_frac": 0.0, "clue_share": 0.5}

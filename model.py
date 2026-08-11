@@ -58,6 +58,7 @@ class ModelConfig:
     settle_threshold: float = 0.995
     halt_bias_init: float = -3.0  # born reluctant to call a cell settled
     rel_bias: bool = True         # constraint-graph attention bias
+    pos_embed: bool = True        # per-cell absolute position embedding
     structured_pos: bool = True   # add row/col/box embeddings
     kind_embed: bool = True       # tell clues apart from the model's own guesses
     settle_feedback: bool = True  # feed per-cell settledness into the board
@@ -246,7 +247,8 @@ class RefinementUT(nn.Module):
 
         # input / board embedding
         self.tok = nn.Embedding(VOCAB, cfg.d_model)
-        self.pos = nn.Embedding(N_CELLS, cfg.d_model)
+        if cfg.pos_embed:
+            self.pos = nn.Embedding(N_CELLS, cfg.d_model)
         if cfg.kind_embed:
             self.kind = nn.Embedding(N_KINDS, cfg.d_model)
         if cfg.structured_pos:
@@ -323,7 +325,9 @@ class RefinementUT(nn.Module):
 
     # -- embedding helpers ------------------------------------------------
     def _embed(self, x: torch.Tensor, clues: torch.Tensor | None) -> torch.Tensor:
-        h = self.tok(x.long()) * math.sqrt(self.cfg.d_model) + self.pos(self.cell_idx)[None]
+        h = self.tok(x.long()) * math.sqrt(self.cfg.d_model)
+        if self.cfg.pos_embed:
+            h = h + self.pos(self.cell_idx)[None]
         if self.cfg.structured_pos:
             h = h + (self.row_emb(self.row_idx) + self.col_emb(self.col_idx)
                      + self.box_emb(self.box_idx))[None]

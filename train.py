@@ -165,11 +165,16 @@ class LR:
 
 
 def build(preset: dict, args) -> tuple[ModelConfig, dict, dict]:
+    model_defaults = dict(MODEL_DEFAULTS)
+    if args.pos_embed is not None:
+        model_defaults["pos_embed"] = args.pos_embed
+    if args.structured_pos is not None:
+        model_defaults["structured_pos"] = args.structured_pos
     mcfg = ModelConfig(
         d_model=args.d_model or preset["d_model"],
         n_heads=args.heads or preset["n_heads"],
         d_ff=args.d_ff or preset["d_ff"],
-        **MODEL_DEFAULTS,
+        **model_defaults,
     )
     loss_kw = dict(preset.get("loss", LOSS_DEFAULTS))
     data_kw = dict(
@@ -192,6 +197,10 @@ def main() -> None:
     ap.add_argument("--lr", type=float, default=None)
     ap.add_argument("--revision-prob", type=float, default=None)
     ap.add_argument("--transpose", type=lambda s: s.lower() in ("1", "true", "yes"), default=None)
+    ap.add_argument("--pos-embed", type=lambda s: s.lower() in ("1", "true", "yes"), default=None,
+                    help="per-cell absolute position embedding (default: on)")
+    ap.add_argument("--structured-pos", type=lambda s: s.lower() in ("1", "true", "yes"), default=None,
+                    help="row/col/box position embeddings (default: on)")
     ap.add_argument("--materialize", type=int, default=None,
                     help="augmentations per base puzzle to materialise once (0 = off)")
     ap.add_argument("--pool", default=None, help="override the base pool npz")
