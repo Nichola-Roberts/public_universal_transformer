@@ -13,3 +13,9 @@
 17:47:03 INFO  eval  step   1000 | solved 0.0000 | finished 0.00 | passes 32.00
 17:49:29 INFO  step   1100 | loss 2.1636 | cell 0.460 | grid 0.004 | stop 32.0 | 1.0 it/s
 17:51:54 INFO  step   1200 | loss 2.0457 | cell 0.484 | grid 0.016 | stop 32.0 | 1.0 it/s
+17:54:20 INFO  step   1300 | loss 1.9753 | cell 0.500 | grid 0.027 | stop 32.0 | 1.0 it/s
+17:56:46 INFO  step   1400 | loss 1.9713 | cell 0.495 | grid 0.016 | stop 32.0 | 0.9 it/s
+17:59:12 INFO  step   1500 | loss 1.9188 | cell 0.521 | grid 0.023 | stop 32.0 | 0.9 it/s
+17:59:18 INFO  eval  step   1500 | solved 0.0259 | finished 0.00 | passes 32.00
+18:01:17 INFO  step   1600 | loss 1.8802 | cell 0.528 | grid 0.027 | stop 32.0 | 0.9 it/s
+18:03:16 INFO  step   1700 | loss 1.8626 | cell 0.530 | grid 0.031 | stop 31.6 | 0.9 it/s
