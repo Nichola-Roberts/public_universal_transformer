@@ -50,6 +50,7 @@ def compute_loss(
     grade_clues: bool = False,
     clue_share: float = 0.0,
     clue_denom_blanks: bool = False,
+    budget_scale: float = 1.0,
 ) -> tuple[torch.Tensor, dict]:
     target = (solutions.long() - 1).clamp(min=0)          # 0..8
     mask = target_mask(puzzles, clues)                    # (B, 81) non-clue cells
@@ -64,28 +65,33 @@ def compute_loss(
         cw = (s_ * nb / (max(1.0 - s_, 1e-6) * nc)).clamp(max=1.0)
     else:
         cw = torch.zeros_like(mask[:, :1])
-    err_w = mask + cw * (1.0 - mask)                      # blanks 1, clues cw
-    err_denom = (grid_denom if clue_denom_blanks else err_w.sum(1)).clamp(min=1.0)
+    clue_w = cw * (1.0 - mask)                            # clues only, weight cw
+    err_denom = (grid_denom if clue_denom_blanks else (mask + clue_w).sum(1)).clamp(min=1.0)
 
     logits = torch.stack(out["step_logits"], dim=1)       # (B, P, 81, 9)
     halts = torch.stack(out["halt_logits"], dim=1)        # (B, P, 81)
     B, P = logits.shape[0], logits.shape[1]
     dev = logits.device
 
-    # 1. error — flat per-pass CE on the logits
+    # 1. error — flat per-pass CE on the logits. Split blanks (deduction, scaled
+    # by budget_scale to keep BPTT gradient magnitude comparable across budgets)
+    # from clues (the copy task, always at full strength — it is the only signal
+    # early training can latch onto, and shrinking it would slow that bootstrap).
     ce = F.cross_entropy(
         logits.reshape(-1, N_DIGITS).float(),
         target[:, None, :].expand(-1, P, -1).reshape(-1),
         reduction="none",
     ).view(B, P, N_CELLS)
-    l_err = ((ce * err_w[:, None]).mean(1).sum(1) / err_denom).mean()
+    l_err_blank = ((ce * mask[:, None]).mean(1).sum(1) / err_denom).mean()
+    l_err_clue = ((ce * clue_w[:, None]).mean(1).sum(1) / err_denom).mean()
+    l_err = budget_scale * l_err_blank + l_err_clue
 
     # 2. settledness — w predicts whether this cell's argmax is right
     correct = (logits.detach().argmax(-1) + 1 == solutions[:, None, :]).float()
     bce = F.binary_cross_entropy_with_logits(halts.float(), correct, reduction="none")
     l_settle = ((bce * mask[:, None]).sum((1, 2)) / (grid_denom * P)).mean()
 
-    loss = l_err + settle_weight * l_settle
+    loss = l_err + budget_scale * settle_weight * l_settle
 
     # 3. optional pass penalty — sum(1 - w) over the passes each grid ran
     w = torch.sigmoid(halts.float())
@@ -94,14 +100,14 @@ def compute_loss(
     l_pass = ((((1.0 - w) * mask[:, None]).sum(-1) * ran).sum(1)
               / (grid_denom * max(budget, 1))).mean()
     if pass_weight > 0:
-        loss = loss + pass_weight * l_pass
+        loss = loss + budget_scale * pass_weight * l_pass
 
     # 4. optional min settledness — -log of the least-settled non-clue cell
     l_min = logits.new_zeros(())
     if min_settle_weight > 0:
         w_min = w.masked_fill(~mask[:, None].bool(), 1.0).amin(dim=2)  # (B, P)
         l_min = (-torch.log(w_min.clamp(min=1e-6))).mean()
-        loss = loss + min_settle_weight * l_min
+        loss = loss + budget_scale * min_settle_weight * l_min
 
     stats = {
         "l_err": l_err.detach(),

@@ -205,6 +205,12 @@ def main() -> None:
     ap.add_argument("--eval-n", type=int, default=2048)
     ap.add_argument("--ckpt-every", type=int, default=1000)
     ap.add_argument("--log-every", type=int, default=100)
+    ap.add_argument("--loss-scale-budget", type=float, default=32.0,
+                    help="reference budget the loss weights were tuned at; the "
+                         "deduction CE (blanks), settledness, pass, and min-settle "
+                         "terms are scaled by this/budget so BPTT gradient "
+                         "magnitude stays comparable across budgets. Clue grading "
+                         "is left at full strength (early bootstrap signal).")
     ap.add_argument("--run-name", default=None)
     ap.add_argument("--resume", default=None)
     ap.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -216,6 +222,7 @@ def main() -> None:
     mcfg.refine_steps = budget
     lr_base = args.lr or preset["lr"]
     dev = args.device
+    budget_scale = args.loss_scale_budget / budget
 
     run = args.run_name or f"{args.preset}-{datetime.now():%Y%m%d-%H%M%S}"
     log_dir = Path("logs") / run
@@ -279,6 +286,19 @@ def main() -> None:
         model.load_state_dict(ck["model_state"])
         if "opt" in ck:
             opt.load_state_dict(ck["opt"])
+        if "scaler" in ck and use_cuda:
+            scaler.load_state_dict(ck["scaler"])
+        if "batcher_rng" in ck:
+            batcher.rng.bit_generator.state = ck["batcher_rng"]
+        if "torch_rng" in ck:
+            torch.set_rng_state(ck["torch_rng"].cpu())
+        if use_cuda and ck.get("cuda_rng") is not None:
+            torch.cuda.set_rng_state_all([t.cpu() for t in ck["cuda_rng"]])
+        if "lr_state" in ck:
+            sched.cycle_start = ck["lr_state"]["cycle_start"]
+            sched.cycle_peak = ck["lr_state"]["cycle_peak"]
+            sched.best = ck["lr_state"]["best"]
+            sched.stall = ck["lr_state"]["stall"]
         start = int(ck.get("step", 0))
         best = float(ck.get("best_grid", 0.0))
         log.info("resumed %s at step %d", args.resume, start)
@@ -288,16 +308,24 @@ def main() -> None:
                 "train": {"budget": budget, "lr": lr_base, "batch_size": args.batch_size,
                           "steps": args.steps, "weight_decay": args.weight_decay,
                           "grad_clip": args.grad_clip, "pool": pool_path, "seed": args.seed,
-                          "lr_schedule": preset["lr_schedule"]}}
+                          "lr_schedule": preset["lr_schedule"],
+                          "loss_scale_budget": args.loss_scale_budget, "budget_scale": budget_scale}}
     (log_dir / "config.json").write_text(json.dumps(cfg_json, indent=2))
     log.info("run %s | device=%s | params=%d | %s", run, dev, count_params(model),
-             f"d{mcfg.d_model}/h{mcfg.n_heads} budget {budget} preset {args.preset}")
+             f"d{mcfg.d_model}/h{mcfg.n_heads} budget {budget} preset {args.preset} "
+             f"budget_scale {budget_scale:.3f}")
 
     def save(name: str) -> None:
         torch.save({"model_state": model.state_dict(), "model_config": mcfg.to_dict(),
                     "train_config": cfg_json["train"], "loss_config": loss_kw,
                     "step": step, "opt": opt.state_dict(), "scaler": scaler.state_dict(),
-                    "best_grid": best}, log_dir / name)
+                    "best_grid": best,
+                    "batcher_rng": batcher.rng.bit_generator.state,
+                    "torch_rng": torch.get_rng_state(),
+                    "cuda_rng": torch.cuda.get_rng_state_all() if use_cuda else None,
+                    "lr_state": {"cycle_start": sched.cycle_start, "cycle_peak": sched.cycle_peak,
+                                 "best": sched.best, "stall": sched.stall},
+                    }, log_dir / name)
 
     def evaluate(step: int) -> None:
         nonlocal best
@@ -329,7 +357,8 @@ def main() -> None:
         seen += args.batch_size
         with torch.autocast("cuda" if use_cuda else "cpu", enabled=use_cuda):
             out = model(board, clues=clues, steps=budget, run_full=True)
-            loss, stats = compute_loss(out, board, s, clues=clues, budget=budget, **loss_kw)
+            loss, stats = compute_loss(out, board, s, clues=clues, budget=budget,
+                                       budget_scale=budget_scale, **loss_kw)
         opt.zero_grad(set_to_none=True)
         scaler.scale(loss).backward()
         scaler.unscale_(opt)
