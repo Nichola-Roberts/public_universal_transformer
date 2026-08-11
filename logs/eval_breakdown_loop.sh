@@ -10,9 +10,11 @@ while true; do
     RUN=${RUN%/}
     CKPT="$RUN/latest.pt"
     [ -f "$CKPT" ] || continue
-    step=$(python3 -c "import torch; print(torch.load('$CKPT', map_location='cpu', weights_only=False).get('step', -1))" 2>/dev/null)
+    raw=$(python3 -c "import torch; print(torch.load('$CKPT', map_location='cpu', weights_only=False).get('step', -1))" 2>/dev/null)
+    [ -n "$raw" ] && [ "$raw" -ge 0 ] || continue
+    step=$((raw + 1))  # train.py stores step 0-indexed (saved at step==999 for log's "step 1000")
     prev=${last[$RUN]:--1}
-    if [ -n "$step" ] && [ "$step" -ge 0 ] && [ $((step % 1000)) -eq 0 ] && [ "$step" -ne "$prev" ]; then
+    if [ $((step % 1000)) -eq 0 ] && [ "$step" -ne "$prev" ]; then
       { echo "===== $(date -u +%Y-%m-%dT%H:%M:%SZ) ====="
         python3 evaluate.py --ckpt "$CKPT" --data data/sudoku-extreme-test.csv \
           --ratings data/sudoku-extreme-test.csv --budgets 32,64,96
