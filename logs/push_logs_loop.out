@@ -4,3 +4,196 @@
  create mode 100644 logs/runs/extreme-full-3.8M-d96h4/latest.pt
 To github.com:Nichola-Roberts/public_universal_transformer.git
    d95a4cb..73426ce  main -> main
+[main 5f6a65b] logs: progress 2026-08-11T17:43:22Z
+ 7 files changed, 30 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   f2bbcdd..5f6a65b  main -> main
+[main 4dc66da] logs: progress 2026-08-11T17:53:25Z
+ 10 files changed, 25 insertions(+)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4/eval_breakdown.log
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   2a5c0e0..4dc66da  main -> main
+[main 86d2302] logs: progress 2026-08-11T18:03:29Z
+ 8 files changed, 25 insertions(+)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-nopos/eval_breakdown.log
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   cb48d32..86d2302  main -> main
+[main 354da41] logs: progress 2026-08-11T18:13:32Z
+ 9 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   86d2302..354da41  main -> main
+[main d7f52af] logs: progress 2026-08-11T18:23:36Z
+ 10 files changed, 30 insertions(+)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   354da41..d7f52af  main -> main
+[main 225f974] logs: progress 2026-08-11T18:34:23Z
+ 10 files changed, 30 insertions(+)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-b64/best.pt
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d7f52af..225f974  main -> main
+[main 0a9e24a] logs: progress 2026-08-11T18:44:28Z
+ 7 files changed, 26 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   225f974..0a9e24a  main -> main
+[main 9aa1a98] logs: progress 2026-08-11T18:54:32Z
+ 11 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (72%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   0a9e24a..9aa1a98  main -> main
+[main f017f92] logs: progress 2026-08-11T19:04:37Z
+ 8 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9aa1a98..f017f92  main -> main
+[main a5e2ced] logs: progress 2026-08-11T19:14:41Z
+ 11 files changed, 30 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   f017f92..a5e2ced  main -> main
+[main 51d2709] logs: progress 2026-08-11T19:24:46Z
+ 7 files changed, 26 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   a5e2ced..51d2709  main -> main
+[main 5bd1c27] logs: progress 2026-08-11T19:34:50Z
+ 10 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   51d2709..5bd1c27  main -> main
+[main 31d1c75] logs: progress 2026-08-11T19:44:55Z
+ 11 files changed, 54 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   5bd1c27..31d1c75  main -> main
+[main 56afa86] logs: progress 2026-08-11T19:54:59Z
+ 9 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   31d1c75..56afa86  main -> main
+[main db7ac7d] logs: progress 2026-08-11T20:05:03Z
+ 9 files changed, 28 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   56afa86..db7ac7d  main -> main
+[main 7b63439] logs: progress 2026-08-11T20:15:07Z
+ 10 files changed, 26 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   db7ac7d..7b63439  main -> main
+[main 48c4834] logs: progress 2026-08-11T20:25:12Z
+ 7 files changed, 30 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   7b63439..48c4834  main -> main
+[main 416ffc2] logs: progress 2026-08-11T20:35:15Z
+ 11 files changed, 30 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   48c4834..416ffc2  main -> main
+[main 99f520a] logs: progress 2026-08-11T20:45:20Z
+ 9 files changed, 49 insertions(+)
+ create mode 100644 logs/runs/extreme-full-3.8M-d96h4-b64/eval_breakdown.log
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   1e387cc..99f520a  main -> main
+[main 8417026] logs: progress 2026-08-11T20:55:23Z
+ 11 files changed, 123 insertions(+), 26 deletions(-)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/eval_breakdown.log (100%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/eval_breakdown.log (100%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/eval_breakdown.log (100%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   99f520a..8417026  main -> main
+[main d7ae969] logs: progress 2026-08-11T21:05:27Z
+ 10 files changed, 148 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   8417026..d7ae969  main -> main
+[main 1c99a81] logs: progress 2026-08-11T21:15:32Z
+ 12 files changed, 122 insertions(+), 22 deletions(-)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/eval_breakdown.log (81%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d7ae969..1c99a81  main -> main
+[main e0ac650] logs: progress 2026-08-11T21:25:36Z
+ 9 files changed, 150 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   1c99a81..e0ac650  main -> main
+[main 12261f4] logs: progress 2026-08-11T21:35:40Z
+ 11 files changed, 150 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   e0ac650..12261f4  main -> main
+[main d8fc7e8] logs: progress 2026-08-11T21:45:45Z
+ 11 files changed, 101 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/best.pt (70%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-b64/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   12261f4..d8fc7e8  main -> main
+[main 440fcae] logs: progress 2026-08-11T21:55:50Z
+ 9 files changed, 38 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/latest.pt (70%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d8fc7e8..440fcae  main -> main
+[main 40ccaa7] logs: progress 2026-08-11T22:05:55Z
+ 9 files changed, 32 insertions(+)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/best.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4-nopos/latest.pt (71%)
+ rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (71%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   440fcae..40ccaa7  main -> main
