@@ -17,7 +17,7 @@ while true; do
     if [ $((step % 1000)) -eq 0 ] && [ "$step" -ne "$prev" ]; then
       { echo "===== $(date -u +%Y-%m-%dT%H:%M:%SZ) ====="
         python3 evaluate.py --ckpt "$CKPT" --data data/sudoku-extreme-test.csv \
-          --ratings data/sudoku-extreme-test.csv --budgets 32,64,96
+          --ratings data/sudoku-extreme-test.csv --budgets 32,64 --batch-size 64
         echo
       } >> "$RUN/eval_breakdown.log" 2>&1
       last[$RUN]=$step
