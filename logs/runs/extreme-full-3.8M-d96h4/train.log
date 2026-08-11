@@ -31,3 +31,7 @@
 17:37:41 INFO  eval  step   2500 | solved 0.0977 | finished 0.03 | passes 31.38
 17:39:47 INFO  step   2600 | loss 1.7558 | cell 0.566 | grid 0.078 | stop 31.3 | 1.5 it/s
 17:41:58 INFO  step   2700 | loss 1.7371 | cell 0.576 | grid 0.086 | stop 31.3 | 1.4 it/s
+17:44:21 INFO  step   2800 | loss 1.7678 | cell 0.571 | grid 0.078 | stop 31.6 | 1.4 it/s
+17:47:42 INFO  step   2900 | loss 1.7922 | cell 0.558 | grid 0.074 | stop 31.6 | 1.3 it/s
+17:51:03 INFO  step   3000 | loss 1.8120 | cell 0.544 | grid 0.074 | stop 31.6 | 1.2 it/s
+17:51:07 INFO  eval  step   3000 | solved 0.1196 | finished 0.03 | passes 31.37
