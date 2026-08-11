@@ -1,6 +1,0 @@
-23:10:35 INFO  resumed logs/runs/extreme-full-3.8M-d192h8/latest.pt at step 12999
-23:10:35 INFO  run runs/extreme-full-3.8M-d192h8-b128 | device=cuda | params=888036 | d192/h8 budget 128 preset extreme-full
-23:10:38 INFO  step  13000 | loss 1.5733 | cell 0.759 | grid 0.633 | stop 61.4 | 0.3 it/s
-23:10:56 INFO  eval  step  13000 | solved 0.6753 | finished 0.68 | passes 56.02
-23:14:20 INFO  step  13100 | loss 12.2192 | cell 0.111 | grid 0.000 | stop 128.0 | 0.4 it/s
-23:17:27 INFO  step  13200 | loss 9.0242 | cell 0.109 | grid 0.000 | stop 128.0 | 0.5 it/s
