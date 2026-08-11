@@ -312,3 +312,7 @@
 02:45:16 INFO  step  24500 | loss 1.0609 | cell 0.848 | grid 0.660 | stop 23.1 | 0.9 it/s
 02:45:18 INFO  eval  step  24500 | solved 0.6450 | finished 0.64 | passes 22.53
 02:46:48 INFO  step  24600 | loss 1.0907 | cell 0.843 | grid 0.660 | stop 23.4 | 0.9 it/s
+05:22:28 INFO  resumed logs/runs/extreme-full-3.8M-d192h8/latest.pt at step 23999
+05:22:28 INFO  run runs/extreme-full-3.8M-d192h8 | device=cuda | params=888036 | d192/h8 budget 32 preset extreme-full budget_scale 1.000
+05:22:30 INFO  step  24000 | loss 1.1193 | cell 0.833 | grid 0.645 | stop 23.6 | 0.5 it/s
+05:22:32 INFO  eval  step  24000 | solved 0.6479 | finished 0.65 | passes 22.38
