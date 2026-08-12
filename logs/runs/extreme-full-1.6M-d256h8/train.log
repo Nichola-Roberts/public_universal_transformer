@@ -66,3 +66,15 @@
 09:09:37 INFO  step   3000 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
 09:09:40 INFO  eval  step   3000 | solved 0.0000 | finished 0.00 | passes 32.00
 09:09:40 INFO  eval  step   3000 | solved 0.0000 | finished 0.00 | passes 32.00
+09:11:54 INFO  step   3100 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:11:54 INFO  step   3100 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:13:18 INFO  step   3200 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:13:18 INFO  step   3200 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:14:41 INFO  step   3300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:14:41 INFO  step   3300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:16:06 INFO  step   3400 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:16:06 INFO  step   3400 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:17:29 INFO  step   3500 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:17:29 INFO  step   3500 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:18:53 INFO  step   3600 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
+09:18:53 INFO  step   3600 | loss nan | cell 0.110 | grid 0.000 | stop 32.0 | 1.1 it/s
