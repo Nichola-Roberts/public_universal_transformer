@@ -31,3 +31,11 @@ Work accordingly.
   is billed by the hour and thrown away afterwards, and can land on a build that
   doesn't match the driver.
 - The GPU is billed by the hour, so don't leave it idle mid-task.
+
+## Tools
+
+- `inspect_weights.py` — SVD-based weight inspector. Loads a checkpoint and
+  reports the singular-value spectrum of every weight matrix (spectral/Frobenius
+  norm, stable rank, entropy rank, conditioning, energy ranks). Splits fused
+  `qkv`/`kv` projections. `--csv` dumps full spectra, `--plot` writes per-matrix
+  PNGs. Defaults to the d96h4 run's `latest.pt`.
