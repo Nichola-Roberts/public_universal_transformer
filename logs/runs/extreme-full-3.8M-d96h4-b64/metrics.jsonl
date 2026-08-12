@@ -400,3 +400,9 @@
 {"kind": "train", "step": 33400, "loss": NaN, "lr": 0.00010000000009127413, "grad_norm": NaN, "cell": 0.118073970079422, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
 {"kind": "train", "step": 33500, "loss": NaN, "lr": 0.00010000000008516178, "grad_norm": NaN, "cell": 0.11101824790239334, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
 {"kind": "eval", "step": 33500, "solved": 0.0, "finished": 0.0, "passes": 64.0}
+{"kind": "train", "step": 33600, "loss": NaN, "lr": 0.00010000000007945874, "grad_norm": NaN, "cell": 0.11487626284360886, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "train", "step": 33700, "loss": NaN, "lr": 0.00010000000007413763, "grad_norm": NaN, "cell": 0.11521252989768982, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "train", "step": 33800, "loss": NaN, "lr": 0.00010000000006917286, "grad_norm": NaN, "cell": 0.1149650365114212, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "train", "step": 33900, "loss": NaN, "lr": 0.00010000000006454055, "grad_norm": NaN, "cell": 0.12194779515266418, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "train", "step": 34000, "loss": NaN, "lr": 0.00010000000006021848, "grad_norm": NaN, "cell": 0.11296192556619644, "grid": 0.0, "l_err": NaN, "l_settle": NaN, "l_pass": NaN, "l_min": NaN, "mean_stop": 64.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "eval", "step": 34000, "solved": 0.0, "finished": 0.0, "passes": 64.0}
