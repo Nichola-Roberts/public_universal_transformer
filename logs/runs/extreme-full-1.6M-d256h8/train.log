@@ -1,2 +1,6 @@
 08:25:51 INFO  run runs/extreme-full-1.6M-d256h8 | device=cuda | params=1564932 | d256/h8 budget 32 preset extreme-full budget_scale 1.000
 08:25:51 INFO  run runs/extreme-full-1.6M-d256h8 | device=cuda | params=1564932 | d256/h8 budget 32 preset extreme-full budget_scale 1.000
+08:27:15 INFO  step    100 | loss 2.9145 | cell 0.109 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:27:15 INFO  step    100 | loss 2.9145 | cell 0.109 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:28:39 INFO  step    200 | loss 2.9163 | cell 0.111 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:28:39 INFO  step    200 | loss 2.9163 | cell 0.111 | grid 0.000 | stop 32.0 | 1.2 it/s

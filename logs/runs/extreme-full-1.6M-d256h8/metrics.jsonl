@@ -1,0 +1,2 @@
+{"kind": "train", "step": 100, "loss": 2.914548873901367, "lr": 0.0005, "grad_norm": 0.32608816027641296, "cell": 0.10909175872802734, "grid": 0.0, "l_err": 2.20625, "l_settle": 0.42081, "l_pass": 0.73466, "l_min": 1.35458, "mean_stop": 32.0, "finished_frac": 0.0, "clue_share": 0.5}
+{"kind": "train", "step": 200, "loss": 2.9162650108337402, "lr": 0.001, "grad_norm": 1.8297866582870483, "cell": 0.11056074500083923, "grid": 0.0, "l_err": 2.20937, "l_settle": 0.41354, "l_pass": 0.74519, "l_min": 1.38504, "mean_stop": 32.0, "finished_frac": 0.0, "clue_share": 0.5}
