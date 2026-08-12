@@ -168,3 +168,17 @@
 10:18:19 INFO  step   7600 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
 10:19:42 INFO  step   7700 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
 10:19:42 INFO  step   7700 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:21:06 INFO  step   7800 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:21:06 INFO  step   7800 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:22:30 INFO  step   7900 | loss nan | cell 0.109 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:22:30 INFO  step   7900 | loss nan | cell 0.109 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:23:54 INFO  step   8000 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:23:54 INFO  step   8000 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:23:56 INFO  eval  step   8000 | solved 0.0000 | finished 0.00 | passes 32.00
+10:23:56 INFO  eval  step   8000 | solved 0.0000 | finished 0.00 | passes 32.00
+10:26:06 INFO  step   8100 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:26:06 INFO  step   8100 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:27:35 INFO  step   8200 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:27:35 INFO  step   8200 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:28:58 INFO  step   8300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:28:58 INFO  step   8300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
