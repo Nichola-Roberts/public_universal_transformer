@@ -413,3 +413,8 @@
 07:46:56 INFO  step  34400 | loss nan | cell 0.119 | grid 0.000 | stop 64.0 | 0.7 it/s
 07:48:58 INFO  step  34500 | loss nan | cell 0.119 | grid 0.000 | stop 64.0 | 0.7 it/s
 07:49:06 INFO  eval  step  34500 | solved 0.0000 | finished 0.00 | passes 64.00
+07:51:07 INFO  step  34600 | loss nan | cell 0.118 | grid 0.000 | stop 64.0 | 0.7 it/s
+07:53:08 INFO  step  34700 | loss nan | cell 0.116 | grid 0.000 | stop 64.0 | 0.7 it/s
+07:55:27 INFO  step  34800 | loss nan | cell 0.114 | grid 0.000 | stop 64.0 | 0.7 it/s
+07:57:28 INFO  step  34900 | loss nan | cell 0.119 | grid 0.000 | stop 64.0 | 0.7 it/s
+07:59:30 INFO  step  35000 | loss nan | cell 0.112 | grid 0.000 | stop 64.0 | 0.7 it/s
