@@ -193,3 +193,9 @@
 01:11:35 INFO  eval  step  16000 | solved 0.4058 | finished 0.40 | passes 51.02
 01:13:59 INFO  step  16100 | loss 0.7234 | cell 0.699 | grid 0.359 | stop 54.4 | 0.6 it/s
 01:16:14 INFO  step  16200 | loss 0.6706 | cell 0.737 | grid 0.438 | stop 54.9 | 0.6 it/s
+01:18:19 INFO  step  16300 | loss 0.7327 | cell 0.695 | grid 0.336 | stop 55.0 | 0.6 it/s
+01:20:22 INFO  step  16400 | loss 0.6993 | cell 0.729 | grid 0.367 | stop 55.1 | 0.6 it/s
+01:22:26 INFO  step  16500 | loss 0.7037 | cell 0.719 | grid 0.383 | stop 54.0 | 0.6 it/s
+01:22:34 INFO  eval  step  16500 | solved 0.4219 | finished 0.41 | passes 50.90
+01:24:38 INFO  step  16600 | loss 0.7015 | cell 0.710 | grid 0.359 | stop 54.0 | 0.6 it/s
+01:26:42 INFO  step  16700 | loss 0.7103 | cell 0.714 | grid 0.383 | stop 55.0 | 0.6 it/s
