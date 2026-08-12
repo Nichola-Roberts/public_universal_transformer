@@ -182,3 +182,5 @@
 10:27:35 INFO  step   8200 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
 10:28:58 INFO  step   8300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
 10:28:58 INFO  step   8300 | loss nan | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:30:22 INFO  step   8400 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s
+10:30:22 INFO  step   8400 | loss nan | cell 0.111 | grid 0.000 | stop 32.0 | 1.1 it/s

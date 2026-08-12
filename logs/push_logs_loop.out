@@ -563,3 +563,61 @@ To github.com:Nichola-Roberts/public_universal_transformer.git
  rewrite logs/runs/extreme-full-3.8M-d96h4/best.pt (70%)
 To github.com:Nichola-Roberts/public_universal_transformer.git
    bc93184..f907334  main -> main
+[main 838da81] logs: progress 2026-08-12T08:29:42Z
+ 2 files changed, 6 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   82c7f92..838da81  main -> main
+[main 01e9fe7] logs: progress 2026-08-12T08:39:44Z
+ 2 files changed, 21 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   838da81..01e9fe7  main -> main
+[main 018b8ba] logs: progress 2026-08-12T08:49:46Z
+ 4 files changed, 48 insertions(+)
+ create mode 100644 logs/runs/extreme-full-1.6M-d256h8/eval_breakdown.log
+ create mode 100644 logs/runs/extreme-full-1.6M-d256h8/latest.pt
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   01e9fe7..018b8ba  main -> main
+[main bf789f5] logs: progress 2026-08-12T08:59:52Z
+ 4 files changed, 48 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   018b8ba..bf789f5  main -> main
+[main 8e55c4b] logs: progress 2026-08-12T09:09:59Z
+ 4 files changed, 25 insertions(+)
+ rewrite logs/runs/extreme-full-1.6M-d256h8/latest.pt (99%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   bf789f5..8e55c4b  main -> main
+[main 59fa1eb] logs: progress 2026-08-12T09:20:01Z
+ 3 files changed, 41 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   8e55c4b..59fa1eb  main -> main
+[main a465525] logs: progress 2026-08-12T09:30:03Z
+ 4 files changed, 48 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   59fa1eb..a465525  main -> main
+[main 3a22f0d] logs: progress 2026-08-12T09:40:06Z
+ 4 files changed, 25 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   a465525..3a22f0d  main -> main
+[main c2530cf] logs: progress 2026-08-12T09:50:09Z
+ 3 files changed, 44 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3a22f0d..c2530cf  main -> main
+[main 1427e3a] logs: progress 2026-08-12T10:00:11Z
+ 4 files changed, 45 insertions(+)
+ rewrite logs/runs/extreme-full-1.6M-d256h8/latest.pt (68%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   c2530cf..1427e3a  main -> main
+[main f39021b] logs: progress 2026-08-12T10:10:13Z
+ 4 files changed, 25 insertions(+)
+ rewrite logs/runs/extreme-full-1.6M-d256h8/latest.pt (68%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   1427e3a..f39021b  main -> main
+[main adbf67d] logs: progress 2026-08-12T10:20:16Z
+ 3 files changed, 44 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   f39021b..adbf67d  main -> main
+[main de02985] logs: progress 2026-08-12T10:30:17Z
+ 4 files changed, 45 insertions(+)
+ rewrite logs/runs/extreme-full-1.6M-d256h8/latest.pt (99%)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   adbf67d..de02985  main -> main
