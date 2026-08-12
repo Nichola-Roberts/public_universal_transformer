@@ -1,0 +1,2 @@
+08:25:51 INFO  run runs/extreme-full-1.6M-d256h8 | device=cuda | params=1564932 | d256/h8 budget 32 preset extreme-full budget_scale 1.000
+08:25:51 INFO  run runs/extreme-full-1.6M-d256h8 | device=cuda | params=1564932 | d256/h8 budget 32 preset extreme-full budget_scale 1.000
