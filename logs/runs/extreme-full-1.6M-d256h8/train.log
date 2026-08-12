@@ -34,3 +34,19 @@
 08:47:45 INFO  step   1500 | loss 2.9194 | cell 0.113 | grid 0.000 | stop 32.0 | 1.1 it/s
 08:49:10 INFO  step   1600 | loss 2.9578 | cell 0.113 | grid 0.000 | stop 32.0 | 1.1 it/s
 08:49:10 INFO  step   1600 | loss 2.9578 | cell 0.113 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:50:33 INFO  step   1700 | loss 2.9389 | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:50:33 INFO  step   1700 | loss 2.9389 | cell 0.112 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:51:57 INFO  step   1800 | loss 2.9372 | cell 0.115 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:51:57 INFO  step   1800 | loss 2.9372 | cell 0.115 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:53:22 INFO  step   1900 | loss 2.9347 | cell 0.122 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:53:22 INFO  step   1900 | loss 2.9347 | cell 0.122 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:54:46 INFO  step   2000 | loss 2.9428 | cell 0.133 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:54:46 INFO  step   2000 | loss 2.9428 | cell 0.133 | grid 0.000 | stop 32.0 | 1.2 it/s
+08:54:49 INFO  eval  step   2000 | solved 0.0000 | finished 0.00 | passes 32.00
+08:54:49 INFO  eval  step   2000 | solved 0.0000 | finished 0.00 | passes 32.00
+08:56:57 INFO  step   2100 | loss 2.9816 | cell 0.133 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:56:57 INFO  step   2100 | loss 2.9816 | cell 0.133 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:58:27 INFO  step   2200 | loss 2.9860 | cell 0.160 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:58:27 INFO  step   2200 | loss 2.9860 | cell 0.160 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:59:51 INFO  step   2300 | loss nan | cell 0.149 | grid 0.000 | stop 32.0 | 1.1 it/s
+08:59:51 INFO  step   2300 | loss nan | cell 0.149 | grid 0.000 | stop 32.0 | 1.1 it/s
