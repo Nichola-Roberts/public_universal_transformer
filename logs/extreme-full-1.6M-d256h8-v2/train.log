@@ -1,0 +1,14 @@
+22:11:41 INFO  run extreme-full-1.6M-d256h8-v2 | device=cuda | params=1564932 | d256/h8 budget 32 preset extreme-full budget_scale 1.000
+22:13:05 INFO  step    100 | loss 2.2534 | cell 0.121 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:14:29 INFO  step    200 | loss 2.2889 | cell 0.109 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:15:53 INFO  step    300 | loss 2.4078 | cell 0.113 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:17:17 INFO  step    400 | loss 2.3447 | cell 0.112 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:18:41 INFO  step    500 | loss 2.3787 | cell 0.111 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:20:04 INFO  step    600 | loss 2.4188 | cell 0.112 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:21:28 INFO  step    700 | loss 2.4731 | cell 0.117 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:22:52 INFO  step    800 | loss 2.4671 | cell 0.177 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:24:15 INFO  step    900 | loss 2.4377 | cell 0.191 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:25:38 INFO  step   1000 | loss 2.4212 | cell 0.229 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:25:42 INFO  eval  step   1000 | solved 0.0000 | finished 0.00 | passes 32.00
+22:27:05 INFO  step   1100 | loss 2.2977 | cell 0.292 | grid 0.000 | stop 32.0 | 1.2 it/s
+22:28:33 INFO  step   1200 | loss 2.2849 | cell 0.314 | grid 0.000 | stop 32.0 | 1.2 it/s
