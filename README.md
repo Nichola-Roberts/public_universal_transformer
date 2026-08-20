@@ -146,3 +146,27 @@ scripts.
 
 The Sudoku-Extreme test split (`data/sudoku-extreme-test.csv`) used by the
 by-rating evaluation is the standard public release and is not bundled here.
+Same for the `extreme-full` preset's training pool (`data/extreme-full-train.npz`,
+3.8M puzzles) — both are gitignored (too large for git) and must be rebuilt from
+[`sapientinc/sudoku-extreme`](https://huggingface.co/datasets/sapientinc/sudoku-extreme)
+on Hugging Face before an `extreme-full` run:
+
+```bash
+curl -L -o /tmp/train.csv https://huggingface.co/datasets/sapientinc/sudoku-extreme/resolve/main/train.csv
+curl -L -o data/sudoku-extreme-test.csv https://huggingface.co/datasets/sapientinc/sudoku-extreme/resolve/main/test.csv
+python3 -c "
+import csv, numpy as np
+puzzles, solutions = [], []
+with open('/tmp/train.csv') as f:
+    for r in csv.DictReader(f):
+        puzzles.append([0 if c == '.' else int(c) for c in r['question']])
+        solutions.append([int(c) for c in r['answer']])
+np.savez('data/extreme-full-train.npz',
+         puzzles=np.array(puzzles, dtype=np.int8),
+         solutions=np.array(solutions, dtype=np.int8))
+"
+```
+
+On an ephemeral pod (see `CLAUDE.md`) this is lost whenever the box is recycled
+and needs re-running before the next `extreme-full` launch — it isn't backed up
+by pushes to the repo the way `logs/` is.
