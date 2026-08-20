@@ -170,6 +170,8 @@ def build(preset: dict, args) -> tuple[ModelConfig, dict, dict]:
         model_defaults["pos_embed"] = args.pos_embed
     if args.structured_pos is not None:
         model_defaults["structured_pos"] = args.structured_pos
+    if args.init_width_scale is not None:
+        model_defaults["init_width_scale"] = args.init_width_scale
     mcfg = ModelConfig(
         d_model=args.d_model or preset["d_model"],
         n_heads=args.heads or preset["n_heads"],
@@ -201,15 +203,32 @@ def main() -> None:
                     help="per-cell absolute position embedding (default: on)")
     ap.add_argument("--structured-pos", type=lambda s: s.lower() in ("1", "true", "yes"), default=None,
                     help="row/col/box position embeddings (default: on)")
+    ap.add_argument("--init-width-scale", type=lambda s: s.lower() in ("1", "true", "yes"), default=None,
+                    help="scale Linear init std by sqrt(96/d_model) so the same LR "
+                         "transfers across widths (default: off). Helps wider models bootstrap.")
     ap.add_argument("--materialize", type=int, default=None,
                     help="augmentations per base puzzle to materialise once (0 = off)")
     ap.add_argument("--pool", default=None, help="override the base pool npz")
     ap.add_argument("--eval-data", default=None, help="override the held-out eval set (npz or CSV)")
     ap.add_argument("--eval-ratings", default=None, help="ratings npz/CSV aligned to --eval-data")
     ap.add_argument("--seed", type=int, default=0)
-    ap.add_argument("--grad-clip", type=float, default=10.0)
+    ap.add_argument("--grad-clip", type=float, default=10.0,
+                    help="max grad norm (~1.0 recommended for the deep weight-tied "
+                         "recurrence; the default 10.0 rarely engages)")
     ap.add_argument("--weight-decay", type=float, default=0.01)
     ap.add_argument("--warmup", type=int, default=200)
+    ap.add_argument("--lr-half-life", type=int, default=1000,
+                    help="cycles schedule: steps to halve the LR after warmup. "
+                         "Raise (e.g. 4000) to hold LR high longer so a slow "
+                         "bootstrap has time to escape the uniform basin.")
+    ap.add_argument("--amp-dtype", choices=["bf16", "fp16"], default="bf16",
+                    help="autocast dtype on cuda. bf16 (default) has fp32's exponent "
+                         "range and removes the fp16 softmax-overflow NaN; GradScaler "
+                         "is used only for fp16.")
+    ap.add_argument("--halt-warmup", type=int, default=0,
+                    help="ramp the halting-loss terms (settle/pass/min-settle) linearly "
+                         "from 0 to full over this many steps (0 = off). Error and clue "
+                         "grading stay at full strength so the bootstrap is unaffected.")
     ap.add_argument("--eval-every", type=int, default=500)
     ap.add_argument("--eval-n", type=int, default=2048)
     ap.add_argument("--ckpt-every", type=int, default=1000)
@@ -256,8 +275,11 @@ def main() -> None:
     use_cuda = dev.startswith("cuda")
     opt = torch.optim.AdamW(model.parameters(), lr=lr_base, betas=(0.9, 0.95),
                             weight_decay=args.weight_decay, fused=use_cuda)
-    scaler = torch.cuda.amp.GradScaler(enabled=use_cuda)
-    sched = LR(lr_base, preset["lr_schedule"], args.warmup, args.steps)
+    amp_dtype = torch.bfloat16 if args.amp_dtype == "bf16" else torch.float16
+    use_scaler = use_cuda and amp_dtype == torch.float16   # bf16 needs no loss scaling
+    scaler = torch.cuda.amp.GradScaler(enabled=use_scaler)
+    sched = LR(lr_base, preset["lr_schedule"], args.warmup, args.steps,
+               half_life=args.lr_half_life)
 
     # data
     pool_path = _resolve(args.pool or preset["pool"])
@@ -317,7 +339,9 @@ def main() -> None:
                 "train": {"budget": budget, "lr": lr_base, "batch_size": args.batch_size,
                           "steps": args.steps, "weight_decay": args.weight_decay,
                           "grad_clip": args.grad_clip, "pool": pool_path, "seed": args.seed,
-                          "lr_schedule": preset["lr_schedule"],
+                          "lr_schedule": preset["lr_schedule"], "warmup": args.warmup,
+                          "lr_half_life": args.lr_half_life, "amp_dtype": args.amp_dtype,
+                          "halt_warmup": args.halt_warmup,
                           "loss_scale_budget": args.loss_scale_budget, "budget_scale": budget_scale}}
     (log_dir / "config.json").write_text(json.dumps(cfg_json, indent=2))
     log.info("run %s | device=%s | params=%d | %s", run, dev, count_params(model),
@@ -364,10 +388,17 @@ def main() -> None:
             g["lr"] = lr
         board, s, clues = batcher.batch(args.batch_size)
         seen += args.batch_size
-        with torch.autocast("cuda" if use_cuda else "cpu", enabled=use_cuda):
+        # ramp the halting-loss terms in over --halt-warmup steps so they don't
+        # compete with the error/clue-grading gradient during the bootstrap.
+        hf = min(1.0, (step + 1) / args.halt_warmup) if args.halt_warmup > 0 else 1.0
+        loss_kw_step = dict(loss_kw)
+        for k in ("settle_weight", "pass_weight", "min_settle_weight"):
+            if k in loss_kw_step:
+                loss_kw_step[k] = loss_kw_step[k] * hf
+        with torch.autocast("cuda" if use_cuda else "cpu", dtype=amp_dtype, enabled=use_cuda):
             out = model(board, clues=clues, steps=budget, run_full=True)
             loss, stats = compute_loss(out, board, s, clues=clues, budget=budget,
-                                       budget_scale=budget_scale, **loss_kw)
+                                       budget_scale=budget_scale, **loss_kw_step)
         opt.zero_grad(set_to_none=True)
         scaler.scale(loss).backward()
         scaler.unscale_(opt)
@@ -381,7 +412,7 @@ def main() -> None:
                 acc = accuracy(out, board, s, clues=clues)
             its = (step + 1 - start) / max(time.time() - t0, 1e-9)
             row = {"kind": "train", "step": step + 1, "loss": float(loss.detach()),
-                   "lr": lr, "grad_norm": float(gnorm),
+                   "lr": lr, "grad_norm": float(gnorm), "halt_factor": round(hf, 3),
                    "cell": float(acc["cell_acc"]), "grid": float(acc["grid_acc"]),
                    **{k: round(float(v), 5) for k, v in stats.items()}}
             emit(row)

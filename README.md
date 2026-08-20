@@ -69,6 +69,15 @@ python3 train.py --resume logs/extreme-clean/best.pt --steps 60000
 Any preset field is overridable: `--d-model --heads --d-ff --budget --lr
 --revision-prob --transpose --materialize --pool --eval-data`.
 
+**Large-model stability / bootstrap** (defaults reproduce the original recipe;
+these target wider models that stall at the uniform-predictor floor or diverge to
+NaN): `--amp-dtype bf16` (default; removes the fp16 softmax-overflow NaN),
+`--init-width-scale 1` (scales Linear init by `sqrt(96/d_model)` so the LR
+transfers across widths), `--warmup` / `--lr-half-life` (hold LR high longer so a
+slow bootstrap can escape), `--grad-clip 1.0` (the deep weight-tied recurrence
+wants a tight clip), and `--halt-warmup N` (ramp the halting-loss terms in over
+`N` steps so they don't compete with the error gradient during the bootstrap).
+
 The `extreme` default **materialises** a fixed set of 1000 augmentations per base
 puzzle once at startup (~2 min for the full 1M; the count is `--materialize`),
 exactly HRM/TRM's protocol. `extreme-ours` instead resamples a fresh symmetry

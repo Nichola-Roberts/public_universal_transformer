@@ -62,6 +62,7 @@ class ModelConfig:
     structured_pos: bool = True   # add row/col/box embeddings
     kind_embed: bool = True       # tell clues apart from the model's own guesses
     settle_feedback: bool = True  # feed per-cell settledness into the board
+    init_width_scale: bool = False  # scale Linear init std by sqrt(96/d_model)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -314,10 +315,15 @@ class RefinementUT(nn.Module):
                         self.judge.rel_emb):
                 nn.init.zeros_(emb.weight)
 
-    @staticmethod
-    def _init(m: nn.Module) -> None:
+    def _init(self, m: nn.Module) -> None:
         if isinstance(m, nn.Linear):
-            nn.init.normal_(m.weight, std=0.02)
+            # width-scaling heuristic (base width 96) so the same LR transfers
+            # across widths — a knob to sweep, not full μP (which would also
+            # scale per-layer LR). Off by default: std=0.02 as before.
+            std = 0.02
+            if self.cfg.init_width_scale:
+                std *= math.sqrt(96.0 / self.cfg.d_model)
+            nn.init.normal_(m.weight, std=std)
             if m.bias is not None:
                 nn.init.zeros_(m.bias)
         elif isinstance(m, nn.Embedding):
