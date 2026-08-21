@@ -127,3 +127,11 @@
 01:06:01 INFO  step  11500 | loss 1.1946 | cell 0.801 | grid 0.586 | stop 24.7 | 1.1 it/s
 01:07:25 INFO  step  11600 | loss 1.1957 | cell 0.785 | grid 0.562 | stop 24.3 | 1.1 it/s
 01:08:51 INFO  step  11700 | loss 1.2105 | cell 0.789 | grid 0.562 | stop 24.8 | 1.1 it/s
+01:10:16 INFO  step  11800 | loss 1.8222 | cell 0.593 | grid 0.195 | stop 30.8 | 1.1 it/s
+01:11:42 INFO  step  11900 | loss 1.2422 | cell 0.789 | grid 0.560 | stop 25.4 | 1.1 it/s
+01:13:10 INFO  step  12000 | loss 1.1966 | cell 0.796 | grid 0.576 | stop 24.5 | 1.1 it/s
+01:13:13 INFO  eval  step  12000 | solved 0.6045 | finished 0.60 | passes 23.71
+01:15:08 INFO  step  12100 | loss 1.1254 | cell 0.827 | grid 0.625 | stop 23.9 | 1.1 it/s
+01:16:57 INFO  step  12200 | loss 1.1838 | cell 0.807 | grid 0.591 | stop 24.7 | 1.1 it/s
+01:18:26 INFO  step  12300 | loss 1.1949 | cell 0.809 | grid 0.581 | stop 25.0 | 1.1 it/s
+01:19:53 INFO  step  12400 | loss 1.1659 | cell 0.805 | grid 0.591 | stop 24.3 | 1.1 it/s
