@@ -621,3 +621,300 @@ To github.com:Nichola-Roberts/public_universal_transformer.git
  rewrite logs/runs/extreme-full-1.6M-d256h8/latest.pt (99%)
 To github.com:Nichola-Roberts/public_universal_transformer.git
    adbf67d..de02985  main -> main
+[main 82f16ec] logs: progress 2026-08-20T22:38:09Z
+ 7 files changed, 127 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   a734281..82f16ec  main -> main
+[main 6c24f68] logs: progress 2026-08-20T22:48:13Z
+ 5 files changed, 40 insertions(+)
+ create mode 100644 logs/extreme-full-1.6M-d256h8-v2/best.pt
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   82f16ec..6c24f68  main -> main
+[main 2d5eae6] logs: progress 2026-08-20T22:58:21Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   6c24f68..2d5eae6  main -> main
+[main f19f03f] logs: progress 2026-08-20T23:08:29Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   2d5eae6..f19f03f  main -> main
+[main 3f455c5] logs: progress 2026-08-20T23:18:33Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   f19f03f..3f455c5  main -> main
+[main 1d26ec1] logs: progress 2026-08-20T23:28:42Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3f455c5..1d26ec1  main -> main
+[main 7fe62ea] logs: progress 2026-08-20T23:38:51Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   1d26ec1..7fe62ea  main -> main
+[main 132acaa] logs: progress 2026-08-20T23:48:54Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   7fe62ea..132acaa  main -> main
+[main 108f349] logs: progress 2026-08-20T23:59:04Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   132acaa..108f349  main -> main
+[main d5dddb9] logs: progress 2026-08-21T00:09:12Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   108f349..d5dddb9  main -> main
+[main eb5a568] logs: progress 2026-08-21T00:19:16Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d5dddb9..eb5a568  main -> main
+[main 7953335] logs: progress 2026-08-21T00:29:26Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   eb5a568..7953335  main -> main
+[main 5d417fd] logs: progress 2026-08-21T00:39:34Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   7953335..5d417fd  main -> main
+[main adcd225] logs: progress 2026-08-21T00:49:37Z
+ 5 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   5d417fd..adcd225  main -> main
+[main 39d282f] logs: progress 2026-08-21T00:59:47Z
+ 5 files changed, 15 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   adcd225..39d282f  main -> main
+[main 659284a] logs: progress 2026-08-21T01:09:54Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   39d282f..659284a  main -> main
+[main 8e3d3f9] logs: progress 2026-08-21T01:19:58Z
+ 5 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   659284a..8e3d3f9  main -> main
+[main d06888f] logs: progress 2026-08-21T01:30:09Z
+ 5 files changed, 15 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   8e3d3f9..d06888f  main -> main
+[main b37d214] logs: progress 2026-08-21T01:40:17Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d06888f..b37d214  main -> main
+[main ea41fb5] logs: progress 2026-08-21T01:50:21Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   b37d214..ea41fb5  main -> main
+[main 35a46d6] logs: progress 2026-08-21T02:00:30Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   ea41fb5..35a46d6  main -> main
+[main 47e8fdc] logs: progress 2026-08-21T02:10:36Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   35a46d6..47e8fdc  main -> main
+[main 25f9320] logs: progress 2026-08-21T02:20:40Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   47e8fdc..25f9320  main -> main
+[main 9b62e4d] logs: progress 2026-08-21T02:30:49Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   25f9320..9b62e4d  main -> main
+[main eaa9257] logs: progress 2026-08-21T02:40:55Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9b62e4d..eaa9257  main -> main
+[main 927b171] logs: progress 2026-08-21T02:50:58Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   eaa9257..927b171  main -> main
+[main 2970ea6] logs: progress 2026-08-21T03:01:08Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   927b171..2970ea6  main -> main
+[main 9efe38e] logs: progress 2026-08-21T03:11:16Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   2970ea6..9efe38e  main -> main
+[main fa3b69f] logs: progress 2026-08-21T03:21:19Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9efe38e..fa3b69f  main -> main
+[main 350f771] logs: progress 2026-08-21T03:31:28Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   fa3b69f..350f771  main -> main
+[main b00c10c] logs: progress 2026-08-21T03:41:35Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   350f771..b00c10c  main -> main
+[main 0d28927] logs: progress 2026-08-21T03:51:37Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   b00c10c..0d28927  main -> main
+[main 04a03a1] logs: progress 2026-08-21T04:01:46Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   0d28927..04a03a1  main -> main
+[main 047f55b] logs: progress 2026-08-21T04:11:53Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   04a03a1..047f55b  main -> main
+[main e646996] logs: progress 2026-08-21T04:21:56Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   047f55b..e646996  main -> main
+[main 96bb275] logs: progress 2026-08-21T04:32:04Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   e646996..96bb275  main -> main
+[main 803687c] logs: progress 2026-08-21T04:42:11Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   96bb275..803687c  main -> main
+[main dd4e11f] logs: progress 2026-08-21T04:52:14Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   803687c..dd4e11f  main -> main
+[main 10a0857] logs: progress 2026-08-21T05:02:22Z
+ 5 files changed, 15 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   dd4e11f..10a0857  main -> main
+[main b3e6f8a] logs: progress 2026-08-21T05:12:30Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   10a0857..b3e6f8a  main -> main
+[main acf24ec] logs: progress 2026-08-21T05:22:33Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   b3e6f8a..acf24ec  main -> main
+[main 27276ff] logs: progress 2026-08-21T05:32:40Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   acf24ec..27276ff  main -> main
+[main 9e3f75c] logs: progress 2026-08-21T05:42:46Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   27276ff..9e3f75c  main -> main
+[main c9a6925] logs: progress 2026-08-21T05:52:50Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9e3f75c..c9a6925  main -> main
+[main 473ffc8] logs: progress 2026-08-21T06:03:00Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   c9a6925..473ffc8  main -> main
+[main a2fdedd] logs: progress 2026-08-21T06:13:08Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   473ffc8..a2fdedd  main -> main
+[main 9bda58f] logs: progress 2026-08-21T06:23:10Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   a2fdedd..9bda58f  main -> main
+[main 3153db9] logs: progress 2026-08-21T06:33:18Z
+ 5 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9bda58f..3153db9  main -> main
+[main 3561242] logs: progress 2026-08-21T06:43:26Z
+ 2 files changed, 14 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3153db9..3561242  main -> main
+[main 352d733] logs: progress 2026-08-21T06:53:29Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3561242..352d733  main -> main
+[main a984c42] logs: progress 2026-08-21T07:03:37Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   352d733..a984c42  main -> main
+[main 14bdebd] logs: progress 2026-08-21T07:13:45Z
+ 2 files changed, 14 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   a984c42..14bdebd  main -> main
+[main 9ebaab9] logs: progress 2026-08-21T07:23:48Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   14bdebd..9ebaab9  main -> main
+[main b472c6e] logs: progress 2026-08-21T07:33:55Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9ebaab9..b472c6e  main -> main
+[main 99a6906] logs: progress 2026-08-21T07:44:02Z
+ 2 files changed, 16 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   b472c6e..99a6906  main -> main
+[main e5bf967] logs: progress 2026-08-21T07:54:05Z
+ 5 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   99a6906..e5bf967  main -> main
+[main 08604e3] logs: progress 2026-08-21T08:04:14Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   e5bf967..08604e3  main -> main
+[main 3dff552] logs: progress 2026-08-21T08:15:00Z
+ 2 files changed, 14 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   08604e3..3dff552  main -> main
+[main 80d49b8] logs: progress 2026-08-21T08:25:03Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3dff552..80d49b8  main -> main
+[main d9d08e9] logs: progress 2026-08-21T08:35:10Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   80d49b8..d9d08e9  main -> main
+[main cd59312] logs: progress 2026-08-21T08:45:17Z
+ 2 files changed, 16 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   d9d08e9..cd59312  main -> main
+[main 1f74d5d] logs: progress 2026-08-21T08:55:19Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   cd59312..1f74d5d  main -> main
+[main e6cba4f] logs: progress 2026-08-21T09:05:28Z
+ 5 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   1f74d5d..e6cba4f  main -> main
+[main 2e7aab9] logs: progress 2026-08-21T09:15:37Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   e6cba4f..2e7aab9  main -> main
+[main 3bc793d] logs: progress 2026-08-21T09:25:43Z
+ 3 files changed, 35 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   2e7aab9..3bc793d  main -> main
+[main 2c9969c] logs: progress 2026-08-21T09:35:47Z
+ 5 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   3bc793d..2c9969c  main -> main
+[main 8b0f5f2] logs: progress 2026-08-21T09:45:57Z
+ 5 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   2c9969c..8b0f5f2  main -> main
+[main 05c3b16] logs: progress 2026-08-21T09:56:04Z
+ 3 files changed, 37 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   8b0f5f2..05c3b16  main -> main
+[main 32691c7] logs: progress 2026-08-21T10:06:07Z
+ 4 files changed, 38 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   05c3b16..32691c7  main -> main
+[main 16e399a] logs: progress 2026-08-21T10:16:15Z
+ 4 files changed, 17 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   32691c7..16e399a  main -> main
+[main ef7cfd7] logs: progress 2026-08-21T10:26:21Z
+ 3 files changed, 35 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   16e399a..ef7cfd7  main -> main
+[main 9e89768] logs: progress 2026-08-21T10:36:24Z
+ 4 files changed, 40 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   ef7cfd7..9e89768  main -> main
+[main be34a7c] logs: progress 2026-08-21T10:46:31Z
+ 2 files changed, 6 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   9e89768..be34a7c  main -> main
+[main 7ca58ff] logs: progress 2026-08-21T10:56:33Z
+ 2 files changed, 8 insertions(+)
+To github.com:Nichola-Roberts/public_universal_transformer.git
+   be34a7c..7ca58ff  main -> main
