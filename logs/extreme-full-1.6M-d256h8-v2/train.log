@@ -400,3 +400,10 @@
 07:20:28 INFO  step  36300 | loss 1.0368 | cell 0.846 | grid 0.669 | stop 22.2 | 1.1 it/s
 07:21:52 INFO  step  36400 | loss 1.0138 | cell 0.853 | grid 0.695 | stop 22.1 | 1.1 it/s
 07:23:17 INFO  step  36500 | loss 1.0075 | cell 0.854 | grid 0.674 | stop 22.0 | 1.1 it/s
+07:24:42 INFO  step  36600 | loss 1.0452 | cell 0.847 | grid 0.651 | stop 22.7 | 1.1 it/s
+07:26:06 INFO  step  36700 | loss 1.1076 | cell 0.824 | grid 0.635 | stop 23.0 | 1.1 it/s
+07:27:31 INFO  step  36800 | loss 1.0566 | cell 0.841 | grid 0.669 | stop 22.5 | 1.1 it/s
+07:28:56 INFO  step  36900 | loss 1.0355 | cell 0.844 | grid 0.646 | stop 22.4 | 1.1 it/s
+07:30:21 INFO  step  37000 | loss 1.0798 | cell 0.835 | grid 0.646 | stop 23.2 | 1.1 it/s
+07:30:24 INFO  eval  step  37000 | solved 0.6875 | finished 0.68 | passes 21.75
+07:32:34 INFO  step  37100 | loss 0.9923 | cell 0.867 | grid 0.719 | stop 21.7 | 1.1 it/s
