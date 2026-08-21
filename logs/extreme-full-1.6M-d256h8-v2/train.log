@@ -543,3 +543,7 @@
 10:38:30 INFO  step  49300 | loss 1.0715 | cell 0.842 | grid 0.677 | stop 22.6 | 1.1 it/s
 10:41:10 INFO  step  49400 | loss 1.0539 | cell 0.849 | grid 0.693 | stop 22.4 | 1.1 it/s
 10:43:52 INFO  step  49500 | loss 0.9870 | cell 0.871 | grid 0.732 | stop 21.7 | 1.1 it/s
+10:46:33 INFO  step  49600 | loss 1.0011 | cell 0.855 | grid 0.706 | stop 21.8 | 1.1 it/s
+10:49:15 INFO  step  49700 | loss 1.0509 | cell 0.850 | grid 0.682 | stop 22.3 | 1.1 it/s
+10:51:58 INFO  step  49800 | loss 0.9947 | cell 0.859 | grid 0.706 | stop 21.5 | 1.1 it/s
+10:54:39 INFO  step  49900 | loss 1.0310 | cell 0.841 | grid 0.680 | stop 22.1 | 1.1 it/s
